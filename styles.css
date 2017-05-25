@@ -1,0 +1,82 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.header-links{
+  list-style: none;
+}
+
+.header-links li{
+  vertical-align: middle;
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.logo{
+  margin-top: -20px;
+  font-size: 60px;
+}
+
+.banner{
+  position: relative; /* absolutely positioned child element */
+  background: #FFF url('http://www.stevensegallery.com/1200/800') no-repeat;
+  background-size: cover;
+  height: 523px;
+}
+
+.banner::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
+.banner h1, .banner h4{
+  position: relative; /* needed to get a z-index on headings */
+  text-align: center;
+  color: #ddd;
+}
+
+.banner h1{
+  font-size: 80px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding-top: 120px;
+}
+
+.banner h4{
+  font-size: 40px;
+}
+
+.main-content{
+  float: left;
+  width: 600px;
+  padding-right: 15px;
+}
+
+.sidebar{
+  float: left;
+  width: 400px;
+  padding-left: 15px;
+}
+
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
